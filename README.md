@@ -38,5 +38,5 @@ GOOGLE SEARCH IMAGES
         --max_results MAX_RESULTS
                                 Amount of images to be scraped.
 
-Google Search require chromedriver
+Google Search require chromedriver  
 Please download chromedriver and put to this folder
