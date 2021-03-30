@@ -39,4 +39,7 @@ GOOGLE SEARCH IMAGES
                                 Amount of images to be scraped.
 
 Google Search require chromedriver  
-Please download chromedriver and put to this folder
+Please download chromedriver and put to this folder  
+Example:
+> python3 google_images_search.py "Cây thiết mộc lan" --max_results 100
+    
