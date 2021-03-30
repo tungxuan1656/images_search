@@ -16,7 +16,7 @@ def save_image(url, save_dir):
     if type.lower() not in ["jpeg", "jfif", "exif", "tiff", "gif", "bmp", "png", "webp", "jpg"]:
         file_name += '.jpg'
         return
-
+    file_name = time.strftime("%Y%m%d_%H%M%S_") + file_name
     try:
         save_path = os.path.join(save_dir, file_name)
         if not os.path.exists(save_dir):
