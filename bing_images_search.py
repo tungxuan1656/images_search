@@ -7,6 +7,7 @@ from fake_useragent import UserAgent
 from uuid import uuid4
 import argparse
 from tqdm import tqdm
+import time
 
 
 def save_image(url, save_dir):
