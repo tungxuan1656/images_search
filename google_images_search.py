@@ -88,7 +88,7 @@ def search(query, max_results=35):
     try:
         elements = browser.find_elements_by_css_selector('a.wXeWr.islib.nfEiy.mM5pbd')
         print(f'[%] Found {len(elements)} images. Get origin url of {max_results} images:')
-        for e in tqdm(elements[:max_results], leave=False):
+        for e in tqdm(elements[:max_results], leave=False, ncols=100, desc='GET URL'):
             e.click()
             time.sleep(0.5)
             href = e.get_attribute('href')
@@ -135,9 +135,8 @@ if __name__ == '__main__':
     max_results = int(args.max_results)
 
     image_urls = search(query, max_results=max_results)
-    print("\n[%] Save Image")
     arr_errors = []
-    for url in tqdm(image_urls):
+    for url in tqdm(image_urls, ncols=100, desc='SAVING IMAGES'):
         e_desc = save_image(url, save_dir)
         if e_desc != None:
             arr_errors.append(e_desc)
